@@ -8,24 +8,20 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
+    public Text livesText;
 
     private Rigidbody2D rb2d;
     private int count;
+    private int lives;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         count = 0;
+        lives = 3;
         winText.text = "";
         SetCountText();
-    }
-
-    void Update()
-    {
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
+        SetLivesText();
     }
 
     void FixedUpdate()
@@ -44,14 +40,43 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
             SetCountText();
         }
+
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.SetActive(false);
+            lives = lives - 1;
+            SetCountText();
+            SetLivesText();
+        }
+
+        if (count == 12)
+        {
+            transform.position = new Vector2(80.0f, 0);
+        }
+
+        if (lives == 0)
+        {
+             UFODeath();
+        }
     }
 
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 12)
+        if (count >= 20)
         {
             winText.text = "You Win! Game created by Kayla Hoyte!";
         }
+    }
+
+    void SetLivesText()
+    {
+        livesText.text = "Lives: " + lives.ToString();
+    }
+
+    void UFODeath()
+    {    
+        winText.text = "You lose! Game created by Kayla Hoyte!";
+        Destroy(this);
     }
 }
