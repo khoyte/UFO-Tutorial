@@ -47,21 +47,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9674}
     - Class: 114
-      Script: {instanceID: 9836}
+      Script: {instanceID: 9762}
     - Class: 114
-      Script: {instanceID: 10276}
+      Script: {instanceID: 9838}
     - Class: 114
-      Script: {instanceID: 10288}
+      Script: {instanceID: 10278}
     - Class: 114
-      Script: {instanceID: 11122}
+      Script: {instanceID: 10290}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11124}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 21034}
+      Script: {instanceID: 11498}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -103,6 +103,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: e08dc097b830ae769e9cdd9b04e903ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ColliderMover
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -511,12 +517,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e08dc097b830ae769e9cdd9b04e903ac
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ColliderMover
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
